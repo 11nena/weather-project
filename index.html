@@ -1,15 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>The Weather</title>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/3c35b4e774.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-    hi git!
+    <div class="container">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-3 main-nav">
+                    <p class="logo">the
+                        <b>W</b>eather </p>
+                    <div class="search-cities">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item nav-heading">
+                                city
+                                <a href="#" class="citi-link special">
+                                    <i class="fas fa-city"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="citi-link">
+                                    London
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="citi-link">
+                                    Paris
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="citi-link">
+                                    Berlin
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="citi-link">
+                                    Sydney
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="weather-details">
+                        <p class="nav-heading">
+                            weather details
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p>
+                                    <i class="fas fa-cloud"></i>
+                                    12%
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    <i class="fas fa-tint"></i>
+                                    78%
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    <i class="fas fa-wind"></i>
+                                    2km/h
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    <i class="fas fa-cloud-rain"></i>
+                                    0 mm
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-heading">
+
+                        <form class="form-inline" id="form-control">
+                            <input class="form-control col-lg-6" id="search-input" type="search" placeholder="Search for places..." aria-label="Search">
+                            <button class="btn my-2 my-sm-0" id="search-place" type="submit">
+                                <i class="fas fa-search" type="submit"></i>
+                                <button class="btn my-2 my-sm-0" type="submit" id="current-weather">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </button>
+                            </button>
+                        </form>
+
+                        <h1 class="today-heading">week</h1>
+                    </div>
+
+                    <div class="row week-weather">
+                        <div class="col-2 round-decor current-day">
+                            <div class="forecast-day">Mon</div>
+                            <div class="forecast-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="forecast-temperature">18°</div>
+                        </div>
+                        <div class="col-2 round-decor">
+                            <div class="forecast-day">Thu</div>
+                            <div class="forecast-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="forecast-temperature">18°</div>
+                        </div>
+                        <div class="col-2 round-decor">
+                            <div class="forecast-day">Wen</div>
+                            <div class="forecast-icon">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div class="forecast-temperature">18°</div>
+                        </div>
+                        <div class="col-2 round-decor">
+                            <div class="forecast-day">Thu</div>
+                            <div class="forecast-icon">
+                                <i class="fas fa-cloud-showers-heavy"></i>
+                            </div>
+                            <div class="forecast-temperature">18°</div>
+                        </div>
+                        <div class="col-2 round-decor">
+                            <div class="forecast-day">Fri</div>
+                            <div class="forecast-icon">
+                                <i class="fas fa-snowflake"></i>
+                            </div>
+                            <div class="forecast-temperature">18°</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <nav class="nav">
+                            <h1>
+                                today
+                            </h1>
+                            <a class="nav-item nav-link degree" href="#" id="cel">°C</a>
+                            <a class="nav-item nav-link degree" href="#" id="far">°F</a>
+                        </nav>
+                        <div class="row today-weather">
+                            <div class="col-3 temperature" id="temperature">12°</div>
+                            <div class="col-4">
+                                <div class="city" id="city">Lisbon</div>
+                                <div class="date" id="date">16.00 Monday 22 Oct 19</div>
+                            </div>
+                            <div class="col-2 sunny-text">
+                                <i class="fas fa-sun sunny"></i>
+                                <div>sunny</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="C:\Users\bezde\Desktop\SheCodesPlus\projeect\5brkp (1)\src\script.js">
+    </script>
 </body>
 
 </html>
