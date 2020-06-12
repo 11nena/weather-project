@@ -1,0 +1,214 @@
+.container {
+  margin-top: 50px;
+  font-family: "Lato", sans-serif;
+}
+
+div.row {
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+
+/* main nav */
+.main-nav {
+  background-color: #464360;
+  
+}
+
+p.logo {
+  font-size: 20px;
+  color: #f1f2f2;
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.fa-city{
+  font-size: 16px;
+  padding: 8px;
+}
+
+.list-group-item {
+  background-color: transparent;
+  font-size: 14px;
+  text-decoration: none;
+  color: #b6a5b5;
+  border: none;
+  text-align: center;
+}
+
+a.citi-link {
+  font-size: 14px;
+  color: #b6a5b5;
+}
+
+a.citi-link:hover {
+  color: #f1f2f2;
+  text-decoration: none;
+}
+
+li .fa-cloud,
+li .fa-tint,
+li .fa-wind,
+li .fa-cloud-rain {
+  font-size: 14px;
+  color: #f1f2f2;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+li p {
+  margin: 0;
+}
+
+.nav-heading {
+  color: #f1f2f2;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* weather part */
+
+.form-inline .form-control {
+  font-size: 16px;
+  padding: 0;
+  margin: 20px 30px;
+}
+
+button.btn {
+  background-color:#EF3C24;
+  padding: 8px, 5px;
+  margin-left: 5px;
+}
+
+.fa-search,
+.fa-map-marker-alt {
+  color: #f1f2f2;
+}
+
+h1 {
+  color: #464360;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+nav.nav {
+  margin-top: 20px;
+}
+
+.nav-link{
+  display: inline;
+}
+
+.degree {
+  color: #f1f2f2;
+  font-size: 12px;
+  font-weight: bolder;
+  text-align: center;
+  background-color: #464360;
+  border-radius: 50%;
+  border: 1px solid #464360;
+  margin-left: 20px;
+  padding: 4px 8px;
+}
+
+.degree:hover {
+  background-color: #fbb040;
+  border: 1px solid #fbb040;
+  color: #f1f2f2;
+}
+
+/*.card-body {
+  max-height: 800px;
+}*/
+
+/*week forecast */
+.weather-part {
+  background: #fff;
+}
+
+div.row.week-weather {
+  margin: 30px 0 0 20px;
+  /*height: 180px;*/
+  background: transparent;
+}
+
+.round-decor {
+  background-color: #b5bfe2;
+  text-align: center;
+  margin: 8px;
+  border: 1px solid #b5bfe2;
+  border-radius: 8px;
+}
+
+.round-decor:hover {
+  background-color: #fbb040;
+  border: 1px solid #fbb040;
+}
+
+.forecast-day {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 8px;
+}
+
+.forecast-day:hover {
+  color: #f1f2f2;
+}
+
+.current-day {
+  background-color: #fbb040;
+  border: 1px solid #fbb040;
+}
+
+.fa-cloud,
+.fa-sun,
+.fa-cloud-sun,
+.fa-cloud-showers-heavy,
+.fa-snowflake {
+  font-size: 20px;
+  margin: 8px;
+}
+
+.forecast-temperature {
+  color: #f1f2f2;
+  font-size: 14px;
+  margin: 8px;
+}
+
+/*today forecast*/
+
+h1.today-heading {
+  margin: 12px 35px;
+  height: 25px;
+}
+
+div.today-weather {
+  background: transparent;
+  margin-top: 50px;
+  color: white;
+}
+
+.temperature {
+  font-size: 55px;
+  text-align: right;
+}
+
+.city {
+  font-size: 30px;
+}
+
+.date {
+  font-size: 14px;
+}
+
+div.sunny-text {
+  font-size: 14px;
+}
+
+.fa-sun.sunny {
+  font-size: 30px;
+}
+
+
