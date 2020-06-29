@@ -108,10 +108,17 @@ button.btn:hover {
   color: #EF3C24;
 }
 
-h3.forecast-heading {
+h3.forecast-heading-today {
   color: #464360;
   font-size: 16px;
   font-weight: bold;
+}
+
+h3.forecast-heading-week {
+  color: #464360;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 nav.nav {
@@ -124,6 +131,15 @@ nav.nav {
 
 div#description {
     text-transform: capitalize;
+}
+
+a.active {
+    color: #464360;
+    cursor: default;
+}
+
+a.active:hover {
+    text-decoration: none;
 }
 
 /*week forecast */
@@ -188,9 +204,7 @@ div.sunny-text {
   font-size: 14px;
 }
 
-.fa-sun.sunny {
-  font-size: 30px;
-}
+p.footer 
 
 
 
